@@ -8,6 +8,6 @@ ENV LC_CTYPE="en_US.UTF-8"
 RUN sudo mkdir -p /var/graphdb && sudo chown -R gitpod:gitpod /var/graphdb \
         && ./configure \
         && sudo make install \
-        && echo "export AGDATA=/var/graphdb" >> ~/.bashrc \
+        && echo "export AGDATA=/workspace/graphdb" >> ~/.bashrc \
         && echo "export PATH=$PATH:/usr/local/pgsql/bin" >> ~/.bashrc \
         && echo "AgensGraph install complete..."

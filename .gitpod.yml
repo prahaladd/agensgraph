@@ -1,8 +1,8 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: echo "Initializing graph database..." && /usr/local/pgsql/bin/ag_ctl init -D /var/graphdb
-    command: echo "Starting AgensGraph..." && /usr/local/pgsql/bin/ag_ctl -D /var/graphdb -l logfile start && createdb allgraphdb -h localhost -U gitpod
+  - init: echo "Initializing graph database..." && /usr/local/pgsql/bin/ag_ctl init -D /workspace/graphdb
+    command: echo "Starting AgensGraph..." && /usr/local/pgsql/bin/ag_ctl -D /workspace/graphdb -l logfile start && createdb allgraphdb -h localhost -U gitpod
 vscode:
   extensions:
     - "ckolkman.vscode-postgres"
