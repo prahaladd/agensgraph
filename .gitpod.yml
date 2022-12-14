@@ -1,5 +1,5 @@
 image:
-  file: .gitpod.dockerfile
+  file: .gitpod.Dockerfile
 tasks:
   - init: echo "Initializing graph database..." && /usr/local/pgsql/bin/ag_ctl init -D /var/graphdb
     command: echo "Starting AgensGraph..." && /usr/local/pgsql/bin/ag_ctl -D /var/graphdb -l logfile start
